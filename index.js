@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 if(!process.env.port)
   require("dotenv").config();
-=======
->>>>>>> c733baa8f4e42be2405d086e77c6cf20d7ee19c8
 // HERE: Packages
 const express = require("express");
 const app = express();
