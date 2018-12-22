@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/login-min.css">
+    <title>To-Do</title>
+</head>
+
+<body>
+    <section class="sec1">
+        <div class="options">
+            <h2 class="title">DO IT</h2>
+            <button class="option" id="loginButton">LOGIN</button>
+            <button class="option" id="registerButton">REGISTER</button>
+        </div>
+    </section>
+    <section class="sec2" id="loginSec">
+        <div class="loginReg">
+            <h3 class="formheading">LOGIN</h3>
+
+            <form method="POST" name="login" id="login" class="form">
+                <input type="email" name="email" placeholder="EMAIL" required><br>
+                <input type="password" name="password" placeholder="PASSWORD" required><br>
+                <button type="submit">SUBMIT</button>
+            </form>
+            <p style="color:red;visibility:hidden;" id="logwarn">Incorrect Id or Password</p>
+
+        </div>
+    </section>
+    <section class="sec2" id="registerSec">
+        <div class="loginReg">
+            <h3 class="formheading">REGISTER</h3>
+            <form method="POST" name="register" id="register" class="form">
+                <input type="text" name="username" placeholder="NAME" required><br>
+                <input type="email" name="email" placeholder="EMAIL" required><br>
+                <input type="password" name="password" placeholder="PASSWORD" required><br>
+                <button type="submit">SUBMIT</button>
+            </form>
+
+            <p style="color:red;visibility:hidden;" id="regwarn">E-mail Already exists</p>
+        </div>
+    </section>
+
+
+    <script>
+        document.getElementById("loginButton").addEventListener("click", () => {
+            document.getElementById("registerSec").style.opacity = "0";
+            
+            setTimeout(()=>{
+                document.getElementById("registerSec").style.display = "none";
+                document.getElementById("loginSec").style.display = "flex";
+                document.getElementById("loginSec").style.opacity = "1";
+            },200)
+            
+        })
+        document.getElementById("registerButton").addEventListener("click", () => {
+            
+            document.getElementById("loginSec").style.opacity = "0";
+            setTimeout(()=>{
+                document.getElementById("loginSec").style.display = "none";
+
+                document.getElementById("registerSec").style.display = "flex";
+                document.getElementById("registerSec").style.opacity = "1";
+            },200);     
+        })
+    </script>
+
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
