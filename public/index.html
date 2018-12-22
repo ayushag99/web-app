@@ -4,45 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/style-min.css">
 
     <title>Document</title>
 </head>
 <body>
-    
-    <nav></nav>
+    <header>
+        <a href="/"><h1>GAMERS STOP</h1></a>
+        <nav>
+            
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="./contact">CONTACT US</a></li>
+                <li><a href="./authenticate">LOGIN</a></li>
+            </ul>
+        </nav>
+        <button><img src="./images/list.svg" alt="" class="menu">
+        </button>
+
+    </header>
+
     <div class="container">
-        <a href="">
-            <div class="cont-bg">
+        <div class="cont">
+            <a href="" class="contlink">
                 <img src="./images/solo.jpg" alt="">
-                <span class="one">SOLO</span>
-                <span class="two">1v1</span>
-            </div>
-        </a>
-        
-        <a href="">
-            <div class="cont-bg">
+                <div class="over">
+                    <span class="one">SOLO</span>
+                    <span class="two">Check Available Matches</span>
+                    <span class="three">1v1</span>
+                </div>
+            </a>
+        </div>
+        <div class="cont">
+            <a href="" class="contlink">
                 <img src="./images/duo.jpg" alt="">
-                <span class="one">DUO</span>
-                <span class="two">2v2</span>
-            </div>
-        </a>
-        
-        <a href="">
-            <div class="cont-bg">
+                <div class="over">
+                        <span class="one">DUO</span>
+                        <span class="two">Check Available Matches</span>
+                        <span class="three">2v2</span>
+                    </div>
+            </a>
+        </div>
+        <div class="cont">
+            <a href="" class="contlink">
                 <img src="./images/squad.jpg" alt="">
-                <span class="one">SQUAD</span>
-                <span class="two">4v4</span>
-            </div>
-        </a>
-        
+                <div class="over">
+                    <span class="one">SQUAD</span>
+                    <span class="two">Check Available Matches</span>
+                    <span class="three">4v4</span>
+                </div>
+            </a>
+        </div>
+        <div class="cont">
+            <a href="" class="contlink">
+                <img src="./images/squad.jpg" alt="">
+                <div class="over">
+                    <span class="one">Tournament</span>
+                    <span class="two">Check Available Matches</span>
+                    <span class="three">MIX</span>
+                </div>
+            </a>
+        </div>
     </div>
-    
-
     <footer>
-        Follow us on: <a><img src="./images/instagram.svg" alt="" class="social"></a> <a href=""><img src="./images/facebook-logo.svg" alt="" class="social"></a>
-    </footer>
+        <div class="foot-one">
+            <p>Follow us on:</p>
+            <a href=""><img src="./images/instagram.svg" alt="Inatagram" class="social"></a>
+            <a href=""><img src="./images/facebook-logo.svg" alt="Facebook" class="social"></a>
 
+        </div>
+        <div class="foot-two">
+            <h3 class="credit">Designed and Developed by <a href="" ><span class="name">Ayush Agrawal</span></a></h3>
+            <p class="copy">All rights reserved | Copyright &copy 2018 with Gamers Stop</p>
+        </div>
+        
+    </footer>
 </body>
+<script>
+    document.querySelector(".menu").addEventListener("click", ()=>{
+        document.querySelector("nav").style.display="block";
+    });
+    document.querySelector("nav").addEventListener("click", (e)=>{
+        e.target.style.display="none";
+    });
+</script>
 </html>
