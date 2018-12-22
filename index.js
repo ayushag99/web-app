@@ -1,4 +1,3 @@
-require("dotenv").config();
 // HERE: Packages
 const express = require("express");
 const app = express();
